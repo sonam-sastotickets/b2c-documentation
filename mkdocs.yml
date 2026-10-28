@@ -25,6 +25,12 @@ nav:
 - Download eTicket : download.md
 - Ticket Details : details.md
 - Postman : postman.md
+plugins:
+  - search
+  - encryptcontent:
+      # Password is read from the environment so it is never committed.
+      global_password: !ENV DOCS_PASSWORD
+      remember_keys: true
 markdown_extensions:
   - admonition
   - pymdownx.superfences
